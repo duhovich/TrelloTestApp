@@ -8,6 +8,11 @@ namespace TrelloTestApp.Controllers
 {
     public class TrelloWebHookHandler : WebHookHandler
     {
+        public TrelloWebHookHandler()
+        {
+            Receiver = TrelloWebHookReceiver.ReceiverName;
+        }
+
         public override Task ExecuteAsync(string receiver, WebHookHandlerContext context)
         {
             Trace.TraceInformation(DateTime.Now.ToShortTimeString() + Environment.NewLine);
