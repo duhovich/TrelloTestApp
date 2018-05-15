@@ -19,6 +19,9 @@ namespace TrelloTestApp
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            // Load receivers
+            config.InitializeReceiveTrelloWebHooks();
         }
     }
 }
