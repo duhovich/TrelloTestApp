@@ -16,8 +16,9 @@
     </div>
     <div>
         RawUrl: @Request.RawUrl <br />
-        AbsoluteUri: @Request.Url.AbsoluteUri
-        UserHostAddress: @Request.UserHostAddress
+        AbsoluteUri: @Request.Url.AbsoluteUri <br />
+        UserHostAddress: @Request.UserHostAddress <br />
+        Real url: @Request.ServerVariables["HTTP_X_FORWARDED_FOR"]
     </div>
 </body>
 </html>
